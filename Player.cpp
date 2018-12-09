@@ -92,7 +92,7 @@ void Player::ShowPlayerTotalRank()
 //================================================================
 // ƒxƒbƒg‚·‚é
 //================================================================
-void Player::BetCoins(int bet)
+void Player::BetPlayerCoins(int bet)
 {
 	m_wallet->BetCoin(bet);
 }

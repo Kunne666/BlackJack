@@ -58,7 +58,9 @@ int main()
 		cout << "ベット額を指定" << endl;
 		cin >> bet;
 
-		m_player->BetCoins(bet);
+		cout << bet << "枚ベットする" << endl;
+		m_player->BetPlayerCoins(bet);
+		m_dealer->BetDealerCoins(bet);
 		// =======================================
 
 		// トランプをシャッフルする
@@ -72,18 +74,19 @@ int main()
 		m_dealer->ShowDealerWallet();
 
 		// 手札へ２枚カードを配る
+		cout << "====== ２枚カードを配る ======" << endl;
 		m_player->TwoCardsAddPlayerHands();
 		m_dealer->TwoCardsAddDealerHands();
 
 		// DoubleDown選択 ========================
-		bool doubleDown = false;
+		//bool doubleDown = false;
 
-		cout << endl;
-		cout << "DoubleDownするか？" << endl;
-		cout << "Yes(1) / No(0)" << endl;
-		cin >> doubleDown;
+		//cout << endl;
+		//cout << "DoubleDownするか？" << endl;
+		//cout << "Yes(1) / No(0)" << endl;
+		//cin >> doubleDown;
 
-		if (doubleDown) {}
+		//if (doubleDown) {}
 
 		// =======================================
 

@@ -28,7 +28,7 @@ public:
 	// ëÄçÏ
 	void AddWallet(Coin* coin);
 	void ShowWallet();
-	void BetCoin(int &bet);
+	void BetCoin(int bet);
 
 };
 

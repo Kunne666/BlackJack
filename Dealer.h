@@ -35,6 +35,7 @@ public:
 	void ShowDealerWallet();
 	void ShowDealerTotalRank();
 	void GetDealerCoin();
+	void BetDealerCoins(int bet);
 
 };
 

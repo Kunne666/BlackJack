@@ -47,13 +47,12 @@ void Wallet::ShowWallet()
 //================================================================
 // ベットする
 //================================================================
-void Wallet::BetCoin(int &bet)
+void Wallet::BetCoin(int bet)
 {
-	m_count - bet;
+	m_count -= bet;
 	for (int i = 0; i < bet; i++)
 	{
-		m_coin.pop_back;
+		m_coin.pop_back();
 	}
-	cout << bet << "枚ベットする" << endl;
 }
 

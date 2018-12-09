@@ -32,7 +32,7 @@ public:
 	void ShowPlayerWallet();
 	void ShowPlayerTotalRank();
 	void GetPlayerCoin();
-	void BetCoins(int bet);
+	void BetPlayerCoins(int bet);
 
 };
 

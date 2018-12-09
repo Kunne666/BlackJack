@@ -89,3 +89,11 @@ void Dealer::ShowDealerTotalRank()
 {
 	m_hand->TotalRankInHands();
 }
+
+//================================================================
+// ƒxƒbƒg‚·‚é
+//================================================================
+void Dealer::BetDealerCoins(int bet)
+{
+	m_wallet->BetCoin(bet);
+}

@@ -42,7 +42,32 @@ void Hand::AddHand(Card* card)
 		if (m_card[i] == nullptr)
 		{
 			m_card[i] = card;
+
+			if (card->m_rank > 10)
+			{
+				card->m_rank = 10;
+			}
+			if (card->m_rank < 2)
+			{
+				bool which = false;
+
+				cout << endl;
+				cout << "Aを1として扱いますか？" << endl;
+				cout << "Yes(1) / No(0)" << endl;
+
+				cin >> which;
+
+				if (which == true)
+				{
+					card->m_rank = 1;
+				}
+				else
+				{
+					card->m_rank = 11;
+				}
+			}
 			m_rankCount += card->m_rank;
+
 			m_count++;
 			break;
 		}
@@ -82,13 +107,6 @@ void Hand::ShowDealerHand()
 //================================================================
 void Hand::TotalRankInHands()
 {
-	//for each (Card* card in m_card)
-	//{
-	//	if (card != nullptr)
-	//	{
-	//		m_rankCount += card->m_rank;
-	//	}
-	//}
 	cout << "現在のランクの合計値 : " << m_rankCount << endl;
 	cout << endl;
 }
