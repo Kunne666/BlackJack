@@ -78,31 +78,28 @@ int main()
 		m_player->TwoCardsAddPlayerHands();
 		m_dealer->TwoCardsAddDealerHands();
 
-		// DoubleDown選択 ========================
-		//bool doubleDown = false;
-
-		//cout << endl;
-		//cout << "DoubleDownするか？" << endl;
-		//cout << "Yes(1) / No(0)" << endl;
-		//cin >> doubleDown;
-
-		//if (doubleDown) {}
-
-		// =======================================
-
-		// Stand選択(Stay)
-
-		// カードのランクの合計値が１６以下なら強制的にHitする
-		//if ()
-		//{
-		//	m_player->OneCardAddPlayerHands();
-		//}
-
-		// ランクの合計値が２２を以上か？
-		// 越えていたらコインを没収
+		int playerJudge = 4;
+		int dealerJudge = 4;
+		playerJudge = m_player->PlayerJudge();
 
 		// ランクの合計値が２１である
-		// 勝利側にベットしたコインを渡す
+		if (playerJudge == 1)
+		{
+			int compensation = bet * 2;
+			m_player->CompensationPlayerCoins(compensation);
+		}
+
+		// カードのランクの合計値が１６以下なら強制的にHitする
+		if (playerJudge == 2)
+		{
+			m_player->OneCardAddPlayerHands();
+		}
+
+		// ランクの合計値が２２を以上か？
+		if (playerJudge == 3)
+		{
+
+		}
 
 		// プレイヤーの手札の表示
 		m_player->ShowPlayerHands();

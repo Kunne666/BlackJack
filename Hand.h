@@ -30,6 +30,7 @@ public:
 	void ShowHand();
 	void ShowDealerHand();
 	void TotalRankInHands();
+	int Judge();
 
 };
 

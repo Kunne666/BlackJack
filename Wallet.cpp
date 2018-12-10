@@ -56,3 +56,15 @@ void Wallet::BetCoin(int bet)
 	}
 }
 
+//================================================================
+// •ñV‚ğó‚¯æ‚é
+//================================================================
+void Wallet::CompensationCoin(int compensation)
+{
+	m_count += compensation;
+	//for (int i = 0; i < compensation; i++)
+	//{
+	//	m_coin.push_back(compensation);
+	//}
+}
+

@@ -96,3 +96,19 @@ void Player::BetPlayerCoins(int bet)
 {
 	m_wallet->BetCoin(bet);
 }
+
+//================================================================
+// ”»’è
+//================================================================
+int Player::PlayerJudge()
+{
+	return m_hand->Judge();
+}
+
+//================================================================
+// •ñV‚ðŽó‚¯Žæ‚é
+//================================================================
+void Player::CompensationPlayerCoins(int compensation)
+{
+	m_wallet->CompensationCoin(compensation);
+}

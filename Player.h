@@ -33,6 +33,8 @@ public:
 	void ShowPlayerTotalRank();
 	void GetPlayerCoin();
 	void BetPlayerCoins(int bet);
+	int PlayerJudge(); 
+	void CompensationPlayerCoins(int compensation);
 
 };
 

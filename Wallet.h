@@ -29,6 +29,7 @@ public:
 	void AddWallet(Coin* coin);
 	void ShowWallet();
 	void BetCoin(int bet);
+	void CompensationCoin(int compensation);
 
 };
 

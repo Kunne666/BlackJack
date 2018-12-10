@@ -112,13 +112,31 @@ void Hand::TotalRankInHands()
 }
 
 //================================================================
-// ƒuƒ‰ƒbƒNƒWƒƒƒbƒN”»’è
+// ”»’è
 //================================================================
-bool Hand::BlackJackJudge()
+int Hand::Judge()
 {
 	if (m_rankCount == 21)
 	{
-		cout << "BlackJack!!" << endl;
+		cout << endl;
+		cout << "‡Œv’l‚Q‚PAŸ—˜" << endl;
+		return 1;
 	}
-	return true;
+	else if (m_rankCount < 17)
+	{
+		cout << endl;
+		cout << "‡Œv’l‚P‚UˆÈ‰º‚Ì‚½‚ßA‹­§“I‚É‚g‚‰‚”A‚r‚”‚‚Ž‚„•s‰Â" << endl;
+		return 2;
+	}
+	else if (m_rankCount < 17 && m_rankCount>21)
+	{
+		cout << endl;
+		cout << "‡Œv’l‚P‚VˆÈã‚Q‚OˆÈ‰º‚Ì‚½‚ßA‚g‚‰‚”‚ª‰Â”\" << endl;
+	}
+	else if (m_rankCount > 21)
+	{
+		cout << endl;
+		cout << "‡Œv’l‚Q‚QˆÈã‚Ì‚½‚ßA‚a‚•‚’‚“‚”" << endl;
+		return 3;
+	}
 }
