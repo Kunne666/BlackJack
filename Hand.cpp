@@ -110,3 +110,15 @@ void Hand::TotalRankInHands()
 	cout << "現在のランクの合計値 : " << m_rankCount << endl;
 	cout << endl;
 }
+
+//================================================================
+// ブラックジャック判定
+//================================================================
+bool Hand::BlackJackJudge()
+{
+	if (m_rankCount == 21)
+	{
+		cout << "BlackJack!!" << endl;
+	}
+	return true;
+}
